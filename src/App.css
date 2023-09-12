@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@300&display=swap');
+
+*,html{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Inter, Monserrat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HEADER */
+header{
+    height: 96px;
+    width: 100%;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E5E5E5;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom:100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header > p{
+    margin-left: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* TO DO LIST */
+
+.container{
+    width: 800px;
+    height: 500px;
+    /* border: solid 1px black; */
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.tasks{
+    display: flex;
+    align-items: center;
+    flex:start
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+span{
+    font-size: 28px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button{
+    width: 130px;
+    height: 65px;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;;
+    background: #5C48D3;
+}
+
+.trash{
+    color: #5C48D3; 
+}
+
+.trash:hover, button:hover{
+cursor: pointer;
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+.input{
+    width: 548px;
+    height: 65px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: solid 1px black;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+form{
+    /* border: solid 1px black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    padding-top:30px;
 }

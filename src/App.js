@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Headers from "./components/Headers";
+import Todo from "./components/Todo";
+import Footers from "./components/Footers";
+import { useState } from "react";
 
 function App() {
+  const [tasks, setTasks] = useState([
+    { title: "go swim", isDone: false },
+    { title: "cook dinner", isDone: false },
+  ]);
+  const [inputTask, setInputTask] = useState("");
+  // console.log(task);
+  // console.log(setTask);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Headers />
+      <Todo
+        tasks={tasks}
+        setTasks={setTasks}
+        inputTask={inputTask}
+        setInputTask={setInputTask}
+      />
+      <Footers />
     </div>
   );
 }
